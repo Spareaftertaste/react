@@ -1,0 +1,102 @@
+/* Base Application Styles */
+/*下面为重置样式的内容*/
+html{
+  font-size: 100px;
+}
+body {
+  font-size: 16px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+/*flex的一些简单的组件*/
+.flex{
+  display: flex;
+}
+
+.absolute-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*下面是一级nav的样式*/
+.first-nav{
+  background-color: #242424;
+}
+
+/*一级nav被点击过后的样式*/
+.first-nav .active{
+  background-color: #000;
+}
+
+.fnavbtn{
+  position: relative;
+  padding: 0 .2rem;
+  height: .7rem;
+  line-height: .7rem;
+}
+.fnavbtn:hover{
+  background-color: #000;
+}
+.fnavbtn a{
+  display: block;
+  height: 100%;
+  color: white;
+}
+
+/*当一级nav选中时会有一个三角形*/
+.nav-triangle{
+  position: absolute;left:44%; bottom: 0;
+  width: 0;height: 0;
+  border: solid .06rem;
+  border-color: transparent transparent #c20c0c transparent;
+}
+
+/*下载客户端模块里面的hotlogo*/
+.fnavbtn-hot{
+  position: absolute;top: .21rem;left: 1rem;
+  width: .28rem;
+  height: .19rem;
+  background: url("../images/topbar.png");
+  background-position: -190px 0;
+}
+
+/*nav左边的logo*/
+.logo{
+  padding: 0 .2rem 0 0;
+}
+.logo div{
+  width: 1.55rem;
+  height: .7rem;
+  background: url("../images/topbar.png");
+  background-position: 0 0;
+}
+
+/*nav的搜索input*/
+.fnavbtn-search{
+  position: relative;
+  margin-left: .2rem;
+  width: 1.58rem;
+}
+.fnavbtn-search input{
+  width: 100%;
+  height: .32rem;
+  padding-left: .22rem;
+  border: none;
+  border-radius: .13rem;
+}
+.fnavbtn-search .search-logo{
+  position: absolute;top: .29rem;left: .08rem;
+  background: url("../images/topbar.png");
+  background-position: -.1rem  -1.08rem;
+  width: .12rem ;
+  height: .12rem;
+  background-color: #999;
+}
