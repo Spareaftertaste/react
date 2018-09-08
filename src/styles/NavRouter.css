@@ -88,15 +88,58 @@ body {
 .fnavbtn-search input{
   width: 100%;
   height: .32rem;
-  padding-left: .22rem;
+  font-size: .12rem;
+  padding-left: .3rem;
   border: none;
   border-radius: .13rem;
 }
+
+/*搜索那个小图标的样式*/
 .fnavbtn-search .search-logo{
   position: absolute;top: .29rem;left: .08rem;
   background: url("../images/topbar.png");
   background-position: -.1rem  -1.08rem;
-  width: .12rem ;
-  height: .12rem;
+  width: .13rem ;
+  height: .13rem;
   background-color: #999;
+}
+
+/*视频投稿样式*/
+.fnavbtn-submit{
+  display: flex;
+}
+.fnavbtn-submit a{
+  margin-left: .2rem;
+  padding-left: .33rem;
+  font-size: .12rem;
+  color: #ccc;
+  width: .65rem;
+  height: .32rem;
+  line-height: .32rem;
+  background: url("../images/topbar.png");
+  background-position: 0  -1.4rem;
+}
+.fnavbtn-submit a:hover{
+  color: white;
+  background-position: -1rem  -1.4rem;
+}
+
+/*下面是一级nav登陆的样式*/
+.fnavbtn-login{
+  position: relative;
+}
+.fnavbtn-login a{
+  color: #787878;
+  font-size: .12rem;
+}
+.fnavbtn-login a span{
+  position: absolute;right: -.3rem;top: 45%;
+  width: 0;
+  height: 0;
+  border: solid .06rem;
+  border-color:  #787878 transparent transparent transparent;
+}
+
+.login-list{
+  display: none;
 }

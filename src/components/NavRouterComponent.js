@@ -35,6 +35,22 @@ class NavRouterComponent extends React.Component {
                 <input type="text" placeholder={'音乐/视频/电台/用户'} />
                 <span className={'search-logo'}></span>
               </div>
+              <div className={'fnavbtn-submit absolute-center'}>
+                <a href="https://music.163.com/#/login?targetUrl=%2Fuservideo" target="_blank">视频投稿</a>
+              </div>
+              <div className={'fnavbtn-login absolute-center'}>
+                <a href="#">
+                  登陆<span></span>
+                </a>
+                <div className={'login-list'}>
+                  <div className={'login-phone'}>手机号登陆</div>
+                  <div className={'login-wechat'}>微信登陆</div>
+                  <div className={'login-qq'}>QQ登陆</div>
+                  <div className={'login-sina'}>新浪微博登陆</div>
+                  <div className={'login-wangyi'}>网易账号登陆</div>
+                </div>
+              </div>
+
             </div>
           </div>
           {/*这里是二级nav*/}
