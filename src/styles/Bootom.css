@@ -1,3 +1,73 @@
-.bootom-component {
-  border: 1px dashed #f00;
+.bottom{
+  justify-content: center;
+  min-width: 12rem;
+  height: 148px;
+  overflow: hidden;
+  border-top: 1px solid #d3d3d3;
+  background: #f2f2f2;
+}
+
+/*左边部分的样式*/
+.bottom-left{
+  width: 5.2rem;
+  font-size: .12rem;
+  padding-top: .15rem;
+}
+.bottom-left div,
+.bottom-left a{
+  height: .24rem;
+  line-height: .24rem;
+  color: #666;
+}
+/*左边第一排连接的样式*/
+.bottom-left-link {
+  color: #999;
+}
+.bottom-left-link span{
+  margin: 0 .1rem;
+}
+.bottom-left-link a{
+  /*line-height: .24rem;*/
+  color: #999;
+}
+.bottom-left-link a:hover{
+  text-decoration: #999999 solid;
+}
+/*右边部分的样式*/
+.bottom-right{
+  margin-top: .2rem;
+  width: 4.6rem;
+  font-size: .12rem;
+  flex-direction: row-reverse;
+}
+.bottom-right a{
+  display: block;
+  margin-left: .25rem;
+  padding-top: .55rem;
+  width: .55rem;
+  text-align: center;
+  height: .05rem;
+  background-size: 1.35rem;
+  font-size: .11rem;
+  color: #999;
+}
+.right-cash{
+  background: url("../images/foot_enter_new.png") no-repeat 0 -1.22rem;
+
+}
+.right-reward{
+  background: url("../images/foot_enter_new.png") no-repeat -.74rem -.61rem;
+
+}
+.right-media{
+  background: url("../images/foot_enter_new.png") no-repeat 0 -.61rem;
+
+}
+.right-topic{
+  background: url("../images/foot_enter_new.png") no-repeat -.74rem 0;
+
+}
+.right-musician{
+  background: url("../images/foot_enter_new.png") no-repeat 0 0;
+
 }

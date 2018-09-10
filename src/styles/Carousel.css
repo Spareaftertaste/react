@@ -1,8 +1,11 @@
+.carousel{
+  justify-content: center;
+  position: relative;
+}
 
 .wrapper{
   position: relative;
   width: 730px;
-  margin-left: 1.8rem;
   height: 336px;
   overflow: hidden;
 }
@@ -21,12 +24,13 @@
 }
 
 /*左右箭头的样式*/
-.arrows{
-  position: absolute;
-  top: 2.5rem;
-}
+/*.arrows{*/
+  /*!*position: absolute;*!*/
+  /*!*top: 2.5rem;*!*/
+/*}*/
 .arrow{
   position: absolute;
+  top: 2.5rem;
   width: .37rem;
   height: .63rem;
   line-height: .55rem;
@@ -39,26 +43,26 @@
 }
 
 .arrow-left{
-  left: 1rem;
+  left: 5%;
 }
 .arrow-right{
-  left:12rem;
+  right: 5%;
 }
 
 /*小点点的样式*/
 .dots{
   position: absolute;
-  bottom: 10px;
+  bottom: .1rem;
   width: 100%;
-  height: 20px;
-  line-height: 20px;
+  height: .2rem;
+  line-height: .2rem;
   text-align: center;
 }
 
 .dot{
   display: inline-block;
-  width: .05rem;
-  height: .05rem;
+  width: .07rem;
+  height: .07rem;
   margin: 0 .1rem;
   border-radius: 50%;
   background-color: #ccc;

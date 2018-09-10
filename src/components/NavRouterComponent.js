@@ -2,7 +2,12 @@
 
 import React from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+
+// 推荐模块
 import HomeNavComponent from '../components/HomeNavComponent'
+
+// 底部模块
+import BottomComponent from '../components/BootomComponent'
 
 
 require('styles//NavRouter.css');
@@ -51,15 +56,18 @@ class NavRouterComponent extends React.Component {
                   <div className={'login-wangyi'}><span></span>网易邮箱账号登陆</div>
                 </div>
               </div>
-
             </div>
           </div>
+
           {/*这里是二级nav*/}
           <div>
             <Route exact path="/discover" component={HomeNavComponent} />
             <Route path="/about" component={Mine} />
             <Route path="/topics" component={Friend} />
           </div>
+
+          {/*这里是底部信息*/}
+          <BottomComponent />
         </div>
       </Router>
     );

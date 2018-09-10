@@ -2,7 +2,12 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+// 轮播图组件
 import CarouselComponent from 'components/CarouselComponent';
+
+// 推荐的中间内容
+import ContentComponent from 'components/ContentComponent';
 require('styles//HomeNav.css');
 
 const Img=[
@@ -31,13 +36,16 @@ const HomeNavComponent = ({ match }) => (
         <Route
           exact
           path={match.url}
-          render={() => <CarouselComponent
-            images={Img}
-            speed={1}
-            delay={4}
-            autoPlay={true}
-            autoParse={true}
-          />}
+          render={() => <div>
+              <CarouselComponent
+                images={Img}
+                speed={1}
+                delay={4}
+                autoPlay={true}
+                autoParse={true}
+              /><ContentComponent />
+            </div>
+            }
         />
       </div>
 

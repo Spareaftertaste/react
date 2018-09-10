@@ -37,32 +37,35 @@ class CarouselComponent extends React.Component {
 
   render(){
     return (
-      <div className={'flex'}>
-        <div
-          className="wrapper"
-          onMouseOver={()=>clearInterval(this.timer)}
-          onMouseOut={this.go}
-        >
-          <SlidersItem
-            images={this.props.images}
-            speed={this.props.speed}
-            index={this.state.index}
-          />
-          <SlidersDots
-            images={this.props.images}
-            turn={this.turn}
-            index={this.state.index}
-          />
+      <div>
+        <div className={'flex carousel'}>
+          <div
+            className="wrapper"
+            onMouseOver={()=>clearInterval(this.timer)}
+            onMouseOut={this.go}
+          >
+            <SlidersItem
+              images={this.props.images}
+              speed={this.props.speed}
+              index={this.state.index}
+            />
+            <SlidersDots
+              images={this.props.images}
+              turn={this.turn}
+              index={this.state.index}
+            />
+          </div>
+          <div className={'content-d'}>
+            <a href="https://music.163.com/#/download" className={'download'} target="_blank">
+            </a>
+            <span>PC 安卓 iPhone WP iPad Mac 六大客户端</span>
+          </div>
         </div>
         <SlidersArrows
           turn={this.turn}
         />
-        <div className={'content-d'}>
-          <a href="https://music.163.com/#/download" className={'download'} target="_blank">
-          </a>
-          <span>PC 安卓 iPhone WP iPad Mac 六大客户端</span>
-        </div>
       </div>
+
     )
   }
 }

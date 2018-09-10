@@ -2,6 +2,8 @@
 /*下面为重置样式的内容*/
 html{
   font-size: 100px;
+  background: #f2f2f2;
+
 }
 body {
   font-size: 16px;
@@ -28,6 +30,10 @@ ul,li{
   align-items: center;
 }
 
+/*占位置，用来调整二级nav离左边的距离*/
+.blank{
+  opacity: 0;
+}
 
 /*下面是一级nav的样式*/
 .first-nav{
@@ -168,6 +174,7 @@ ul,li{
   border: 1px solid #202020;
   box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
   border-radius: 4px;
+  z-index: 1000;
 }
 .login-list div{
   position: relative;
