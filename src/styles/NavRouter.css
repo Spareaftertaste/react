@@ -14,6 +14,9 @@ body {
   outline: none;
 }
 
+ul,li{
+  list-style: none;
+}
 /*flex的一些简单的组件*/
 .flex{
   display: flex;
@@ -28,27 +31,36 @@ body {
 
 /*下面是一级nav的样式*/
 .first-nav{
+  justify-content: center;
   background-color: #242424;
+  min-width: 12rem;
 }
 
 /*一级nav被点击过后的样式*/
 .first-nav .active{
   background-color: #000;
 }
-
+.first-nav .active a{
+  color: white;
+}
 .fnavbtn{
   position: relative;
   padding: 0 .2rem;
   height: .7rem;
   line-height: .7rem;
+
 }
 .fnavbtn:hover{
   background-color: #000;
 }
+.fnavbtn:hover .fnavbtn>a{
+  color: white;
+}
 .fnavbtn a{
   display: block;
   height: 100%;
-  color: white;
+  color: #ccc;
+  font-size: .14rem;
 }
 
 /*当一级nav选中时会有一个三角形*/
@@ -73,7 +85,7 @@ body {
   padding: 0 .2rem 0 0;
 }
 .logo div{
-  width: 1.55rem;
+  width: 1.6rem;
   height: .7rem;
   background: url("../images/topbar.png");
   background-position: 0 0;
@@ -82,7 +94,7 @@ body {
 /*nav的搜索input*/
 .fnavbtn-search{
   position: relative;
-  margin-left: .2rem;
+  margin-left: .7rem;
   width: 1.58rem;
 }
 .fnavbtn-search input{
@@ -126,6 +138,8 @@ body {
 
 /*下面是一级nav登陆的样式*/
 .fnavbtn-login{
+  padding-right: .4rem;
+  margin-left: .2rem;
   position: relative;
 }
 .fnavbtn-login a{
@@ -133,13 +147,63 @@ body {
   font-size: .12rem;
 }
 .fnavbtn-login a span{
-  position: absolute;right: -.3rem;top: 45%;
+  position: absolute;right: 0;top: 45%;
   width: 0;
   height: 0;
   border: solid .06rem;
   border-color:  #787878 transparent transparent transparent;
 }
 
+.fnavbtn-login:hover .login-list{
+  display: block;
+}
+
 .login-list{
   display: none;
+  position: absolute;top: .6rem;left: -.45rem;
+  width: 1.6rem;
+  font-size: .12rem;
+  color: #fafafa;
+  background: #2b2b2b;
+  border: 1px solid #202020;
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+  border-radius: 4px;
+}
+.login-list div{
+  position: relative;
+  padding-left: .4rem;
+  cursor: pointer;
+  color: #ccc;
+  line-height: .39rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #242424;
+}
+.login-list div:hover{
+  background-color: #353535;
+  color: white;
+}
+.login-list div span{
+  position: absolute;left: .1rem;top: .09rem;
+  width: .18rem;
+  height: .18rem;
+}
+.login-phone span{
+  background: url("../images/toplist.png") no-repeat;
+  background-position: 0 0;
+}
+.login-wechat span{
+  background: url("../images/toplist.png") no-repeat;
+  background-position: -.2rem -.2rem ;
+}
+.login-qq span{
+  background: url("../images/toplist.png") no-repeat;
+  background-position: -.2rem -.4rem ;
+}
+.login-sina span{
+  background: url("../images/toplist.png") no-repeat;
+  background-position: 0 -.2rem ;
+}
+.login-wangyi span{
+  background: url("../images/toplist.png") no-repeat;
+  background-position: 0 -.4rem;
 }

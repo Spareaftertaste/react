@@ -1,0 +1,98 @@
+
+.wrapper{
+  position: relative;
+  width: 730px;
+  margin-left: 1.8rem;
+  height: 336px;
+  overflow: hidden;
+}
+.sliders{
+  position: absolute;
+  height: 336px;
+}
+.slider{
+  float: left;
+  width: 730px;
+  height: 336px;
+}
+.slider img{
+  width: 100%;
+  height: 100%;
+}
+
+/*左右箭头的样式*/
+.arrows{
+  position: absolute;
+  top: 2.5rem;
+}
+.arrow{
+  position: absolute;
+  width: .37rem;
+  height: .63rem;
+  line-height: .55rem;
+  text-align: center;
+  font-size: .5rem;
+  cursor: pointer;
+}
+.arrow:hover{
+  background-color: #cbcbcb;
+}
+
+.arrow-left{
+  left: 1rem;
+}
+.arrow-right{
+  left:12rem;
+}
+
+/*小点点的样式*/
+.dots{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.dot{
+  display: inline-block;
+  width: .05rem;
+  height: .05rem;
+  margin: 0 .1rem;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+/*小点点激活过后的样式*/
+.dot.active{
+  background-color: #ba0b0b;
+}
+
+/*下载的样式*/
+.download{
+  display: block;
+  margin: 2.12rem 0 0 .19rem;
+  width: 2.15rem;
+  height: .56rem;
+  background: url("../images/download.png") no-repeat 0 99.99rem;
+}
+
+.download:hover{
+  background: url("../images/download.png") no-repeat .01rem -3.4rem;
+}
+
+.content-d{
+  position: relative;
+  display: block;
+  width: 2.54rem;
+  height: 3.36rem;
+  background: url("../images/download.png") no-repeat 0 0;
+}
+.content-d span{
+  position: absolute;bottom: .3rem;
+  color: #8d8d8d;
+  font-size: .12rem;
+  width: 100%;
+  text-align: center;
+}

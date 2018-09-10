@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import HomeNavComponent from '../components/HomeNavComponent'
 
 
 require('styles//NavRouter.css');
@@ -18,7 +19,7 @@ class NavRouterComponent extends React.Component {
               <div className={'logo'}>
                 <div></div>
               </div>
-              <NavBtn activeOnlyWhenExact={true} to="/" label="发现音乐" />
+              <NavBtn activeOnlyWhenExact={true} to="/discover" label="发现音乐" />
               <NavBtn to="/about" label="我的音乐" />
               <NavBtn to="/topics" label="朋友" />
               <div className={'fnavbtn'}>
@@ -43,19 +44,19 @@ class NavRouterComponent extends React.Component {
                   登陆<span></span>
                 </a>
                 <div className={'login-list'}>
-                  <div className={'login-phone'}>手机号登陆</div>
-                  <div className={'login-wechat'}>微信登陆</div>
-                  <div className={'login-qq'}>QQ登陆</div>
-                  <div className={'login-sina'}>新浪微博登陆</div>
-                  <div className={'login-wangyi'}>网易账号登陆</div>
+                  <div className={'login-phone'}><span></span>手机号登陆</div>
+                  <div className={'login-wechat'}><span></span>微信登陆</div>
+                  <div className={'login-qq'}><span></span>QQ登陆</div>
+                  <div className={'login-sina'}><span></span>新浪微博登陆</div>
+                  <div className={'login-wangyi'}><span></span>网易邮箱账号登陆</div>
                 </div>
               </div>
 
             </div>
           </div>
           {/*这里是二级nav*/}
-          <div className={'second-nav'}>
-            <Route exact path="/" component={Home} />
+          <div>
+            <Route exact path="/discover" component={HomeNavComponent} />
             <Route path="/about" component={Mine} />
             <Route path="/topics" component={Friend} />
           </div>
@@ -64,6 +65,7 @@ class NavRouterComponent extends React.Component {
     );
   }
 }
+
 
 // navbtn单独拆出来，用户选中时样式相应的改变
 const NavBtn = ({ label, to, activeOnlyWhenExact }) => (
@@ -79,19 +81,7 @@ const NavBtn = ({ label, to, activeOnlyWhenExact }) => (
   />
 );
 
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
-const Mine = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
-
-const Friend = ({ match }) => (
+const Home = ({ match }) => (
   <div>
     <h2>Topics</h2>
     <ul>
@@ -115,6 +105,18 @@ const Friend = ({ match }) => (
   </div>
 );
 
+const Mine = () => (
+  <div>
+    <h2>About</h2>
+  </div>
+);
+
+const Friend = () => (
+  <div>
+    <h2>About</h2>
+  </div>
+);
+
 const Topic = ({ match }) => (
   <div>
     <h3>{match.params.topicId}</h3>
@@ -124,7 +126,7 @@ const Topic = ({ match }) => (
 // NavRouterComponent.displayName = 'NavRouterComponent';
 
 // Uncomment properties you need
-// NavRouterComponent.propTypes = {};
-// NavRouterComponent.defaultProps = {};
+NavRouterComponent.propTypes = {};
+NavRouterComponent.defaultProps = {};
 
 export default NavRouterComponent;
