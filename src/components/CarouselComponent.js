@@ -19,6 +19,12 @@ class CarouselComponent extends React.Component {
     }
   }
 
+  componentWillUnmount = () => {
+    this.setState = (state,callback)=>{
+      return;
+    };
+  };
+
   go=()=>{
     this.timer=setInterval(()=>{
       this.turn(1)

@@ -1,17 +1,42 @@
 [
   {
-    "name": "simida",
-    "img": "../images/109951163507718781.jpg",
-    "babel": "独立音乐制作人"
+    "data": [
+      {
+        "name": "周杰伦",
+        "img": "../images/1.jpg",
+        "babel": "台湾歌手周杰伦"
+      },
+      {
+        "name": "腾格尔",
+        "img": "../images/109951163507718781.jpg",
+        "babel": "独立音乐制作人"
+      },
+      {
+        "name": "烤面筋",
+        "img": "../images/109951163507718781.jpg",
+        "babel": "独立音乐制作人"
+      }
+    ],
+    "class": "驻唱歌手信息"
   },
   {
-    "name": "simida",
-    "img": "../images/109951163507718781.jpg",
-    "babel": "独立音乐制作人"
-  },
-  {
-    "name": "simida",
-    "img": "../images/109951163507718781.jpg",
-    "babel": "独立音乐制作人"
+    "data": [
+      {
+        "name": "simida",
+        "img": "../images/109951163507718781.jpg",
+        "babel": "独立音乐制作人"
+      },
+      {
+        "name": "simida",
+        "img": "../images/109951163507718781.jpg",
+        "babel": "独立音乐制作人"
+      },
+      {
+        "name": "simida",
+        "img": "../images/109951163507718781.jpg",
+        "babel": "独立音乐制作人"
+      }
+    ],
+    "class": "驻唱歌手信息"
   }
 ]

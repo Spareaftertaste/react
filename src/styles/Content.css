@@ -19,6 +19,7 @@
 .content-right{
   width: 2.52rem;
   height: auto;
+  font-size: .12rem;
   background-color: #f5f5f5;
   border-right: 1px solid #d3d3d3;
 }
@@ -47,4 +48,64 @@
 }
 .my-info div:hover{
   background-color: #c20c0c;
+}
+
+/*入驻歌手部分头部布局*/
+.c-singer-title{
+  padding: .15rem .15rem .1rem .15rem;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  /*border-bottom: 1px solid #d3d3d3;*/
+}
+.c-singer-title .right{
+  color: #666;
+}
+.c-singer-title .left{
+  font-weight: bold;
+}
+
+/*入驻歌手信息部分*/
+.c-singer-list{
+  padding-top: .05rem;
+  margin: 0 .15rem;
+  border-top: 1px solid #d3d3d3;
+}
+.c-singer{
+  margin: .1rem 0;
+  cursor: pointer;
+  border: 1px solid #d3d3d3;
+  background: linear-gradient(to bottom, #fcfcfc 0%, #e2e2e2 100%) ;
+}
+.c-singer:hover{
+  background-color: #f4f4f4;
+}
+/*左边的样式*/
+.c-singer .left{
+  width: .62rem;
+  height: .62rem;
+}
+.c-singer .left div{
+  width: 100%;
+  height: 100%;
+}
+
+/*右边的样式*/
+.c-singer .right{
+  padding-left: .14rem;
+
+}
+.c-singer .right .name{
+  padding: .1rem 0;
+  font-weight: bold;
+  font-size: .16rem;
+}
+.c-singer .right .babel{
+  color: #666;
+}
+
+/*申请成为网易红人按钮样式*/
+.btn-1{
+  width: 2.05rem;
+  height: .31rem;
 }
