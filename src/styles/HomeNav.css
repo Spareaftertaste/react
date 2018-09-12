@@ -15,12 +15,16 @@
   align-items: center;
   border-radius: .1rem;
 }
+.s-navbtn:hover{
+  background-color: #9b0909;
+}
+
 .s-navbtn a{
   padding: .2rem;
   cursor: pointer;
   color: white;
-  height: .2rem;
-  line-height: .2rem;
+
+
   font-size: .12rem;
 }
 
