@@ -68,10 +68,23 @@ class ContentComponent extends React.Component {
         <div>求豆麻袋</div>
       )
     }else{
+      // 入驻歌手
       const cSinger = datas[0];
+
+      // 电台
       const cDj = datas[1];
+
+      // 热门推荐
       const rmtj = datas[2];
+
+      // 个性推荐
       const gxtj = datas[3];
+
+      // 时间
+      const now = datas[4];
+
+      // 榜单
+      const rank = datas[5];
       return (
         <div className={'content-content'}>
           <div className={'content-left'}>
@@ -125,7 +138,7 @@ class ContentComponent extends React.Component {
               </div>
               <div className={'gxtj-list'}>
                 <div className={'gxtj-date'}>
-                  <a href="">
+                  <a  href='https://music.163.com/#/discover/recommend/taste' target="_blank" >
                     <span className={'week'}>{week[parseInt(new Date().getDay())]}</span>
                     <span className={'day'}>{new Date().getDate()}</span>
                   </a>
@@ -137,7 +150,7 @@ class ContentComponent extends React.Component {
                   const src = e.img;
                   return(
                     <div className={'rmtj-content flex'}>
-                      <a  style={{background:'url('+src+')'+' no-repeat', backgroundSize:'1.4rem'+' 1.4rem'}}>
+                      <a  href='https://music.163.com/#/discover/recommend/taste' target="_blank"  style={{background:'url('+src+')'+' no-repeat', backgroundSize:'1.4rem'+' 1.4rem'}}>
                         <div className={'rmtj-bottom'}>
                           <div>
                             <span className={'rmtj-content-num'}></span>
@@ -158,6 +171,106 @@ class ContentComponent extends React.Component {
             {/*没错，这里是广告*/}
             <div className={'ad'}>
               <span className={'ad-logo'}></span>
+            </div>
+
+            {/*这里是新碟上架*/}
+            <div className={'new'}>
+              <div className={'rmtj-title'}>
+                <div className={'sort-list'}>
+                  <a href="https://music.163.com/#/discover/album/" target="_blank" className={'title-rmtj'}>新碟上架</a>
+                </div>
+                <div className={'right flex'}>
+                  <a href="https://music.163.com/#/discover/album/" target="_blank" className={'more'}>更多</a>
+                  <span></span>
+                </div>
+              </div>
+              <div className={'new-list'}>
+                {now.data.map(function (e) {
+                  const src = e.img;
+                  return(
+                    <div>
+                      <div className={'cd'}>
+                        <div className={'cd-img'} style={{background:'url('+src+')'+' no-repeat', backgroundSize:'1rem'+' 1rem'}}></div>
+                        <span className={'play-btn'}></span>
+                      </div>
+                      <div className={'babel'}>{e.babel}</div>
+                      <div className={'artist'}>{e.Artist}</div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/*这里是榜单*/}
+            <div className={'rank'}>
+              <div className={'rmtj-title'}>
+                <div className={'sort-list'}>
+                  <a href="https://music.163.com/#/discover/toplist" target="_blank" className={'title-rmtj'}>榜单</a>
+                </div>
+                <div className={'right flex'}>
+                  <a href="https://music.163.com/#/discover/toplist" target="_blank" className={'more'}>更多</a>
+                  <span></span>
+                </div>
+              </div>
+              <div className={'rank-content'}>
+                <div className={'first'}>
+                  <div className={'title flex'}>
+                    <div className={'img'}>
+                      <img src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" alt=""/>
+                    </div>
+                    <div>
+                      <div className={'rank-title'}>{rank.data[0].class}</div>
+                      <span className={'play'}></span><span className={'collect'}></span>
+                    </div>
+                  </div>
+                  <div className={'rank-list'}>
+                    {rank.data[0].data.map(function (e,index) {
+                      return(
+                        <div style={index%2 !== 1? ({background:'#e8e8e8',fontSize:'.12rem'}):({fontSize:'.12rem'})}><span className={'index'} style={index>=0 && index <3 ? ({color:'red'}):({color:'#000'})}>{index+1}</span>{e}</div>
+                      )
+                    })}
+                    <div className={'rank-bottom'} style={{background:'#e8e8e8'}}><span>查看全部></span></div>
+                  </div>
+                </div>
+                <div className={'second'}>
+                  <div className={'title flex'}>
+                    <div className={'img'}>
+                      <img src="http://p4.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt=""/>
+                    </div>
+                    <div>
+                      <div className={'rank-title'}>{rank.data[1].class}</div>
+                      <span className={'play'}></span><span className={'collect'}></span>
+                    </div>
+                  </div>
+                  <div className={'rank-list'}>
+                    {rank.data[1].data.map(function (e,index) {
+                      return(
+                        <div style={index%2 !== 1? ({background:'#e8e8e8',fontSize:'.12rem'}):({fontSize:'.12rem'})}><span className={'index'} style={index>=0 && index <3 ? ({color:'red'}):({color:'#000'})}>{index+1}</span>{e}</div>
+                      )
+                    })}
+                    <div className={'rank-bottom'} style={{background:'#e8e8e8'}}><span>查看全部></span></div>
+                  </div>
+                </div>
+                <div className={'third'}>
+                  <div className={'title flex'}>
+                    <div className={'img'}>
+                      <img src="http://p4.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt=""/>
+                    </div>
+                    <div>
+                      <div className={'rank-title'}>{rank.data[2].class}</div>
+                      <span className={'play'}></span><span className={'collect'}></span>
+                    </div>
+                  </div>
+                  <div className={'rank-list'}>
+                    {rank.data[2].data.map(function (e,index) {
+                      return(
+                        <div  style={index%2 !== 1? ({background:'#e8e8e8',fontSize:'.12rem'}):({fontSize:'.12rem'})}><span className={'index'} style={index>=0 && index <3 ? ({color:'red'}):({color:'#000'})}>{index+1}</span>{e}</div>
+                      )
+                    })}
+                    <div className={'rank-bottom'} style={{background:'#e8e8e8'}}><span>查看全部></span></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className={'content-right'}>
@@ -229,3 +342,5 @@ ContentComponent.displayName = 'ContentComponent';
 // };
 
 export default ContentComponent;
+
+

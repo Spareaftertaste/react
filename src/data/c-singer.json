@@ -103,5 +103,52 @@
       }
     ],
     "class": "个性推荐"
+  },
+  {
+    "data": [
+      {
+        "Artist": "乐华七子NEXT",
+        "img": "../images/3401888977156753.jpg",
+        "babel": "THE FIRST III"
+      },
+      {
+        "Artist": "宣美",
+        "img": "../images/3401888977156753.jpg",
+        "babel": "WARNING"
+      },
+      {
+        "Artist": "Ariana Grande",
+        "img": "../images/3401888977156753.jpg",
+        "babel": "Sweetener"
+      },
+      {
+        "Artist": "窦唯  /  译乐队",
+        "img": "../images/3401888977156753.jpg",
+        "babel": "呓象"
+      },
+      {
+        "Artist": "PSY.P  /  Melo",
+        "img": "../images/3401888977156753.jpg",
+        "babel": "M.V.P"
+      }
+    ],
+    "class": "新碟上架"
+  },
+  {
+    "data": [
+      {
+        "class": "云音乐飙升榜",
+        "data": ["烤面筋","烤面筋","烤面筋","烤面筋","烤面筋","烤面筋","烤面筋","烤面筋","烤面筋","烤面筋"]
+      },
+      {
+        "class": "云音乐新歌榜",
+        "data": ["可能否","可能否","可能否","可能否","可能否","可能否","可能否","可能否","可能否","可能否"]
+      },
+      {
+        "class": "网易原创歌曲榜",
+        "data": ["Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams","Sweet Dreams"]
+      }
+    ],
+    "class": "榜单数据"
   }
 ]

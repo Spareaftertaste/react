@@ -9,6 +9,7 @@ import HomeNavComponent from '../components/HomeNavComponent'
 // 底部模块
 import BottomComponent from '../components/BootomComponent'
 
+import ToTopComponent from  '../components/ToTopComponent'
 
 require('styles//NavRouter.css');
 
@@ -68,7 +69,12 @@ class NavRouterComponent extends React.Component {
 
           {/*这里是底部信息*/}
           <BottomComponent />
+
+          {/*点击可以返回屏幕最上方*/}
+          <ToTopComponent />
         </div>
+
+
       </Router>
     );
   }

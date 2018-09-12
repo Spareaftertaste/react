@@ -1,0 +1,14 @@
+.to-top{
+  position: fixed;left: 50%;bottom: 1.6rem;
+  display: block;
+  _position: absolute;
+  text-indent: -9999px;
+  margin-left: 500px;
+  width: 49px;
+  height: 44px;
+  cursor: pointer;
+  background: url("../images/sprite.png") no-repeat -2.65rem -.47rem;
+}
+.to-top:hover{
+  background: url("../images/sprite.png") no-repeat -3.25rem -.47rem;
+}
